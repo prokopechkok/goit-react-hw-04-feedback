@@ -27,7 +27,8 @@ export const App = () => {
   const total = countTotalFeedback();
 
   const countPositiveFeedbackPercentage = () =>
-    ((good / (total - neutral)) * 100).toFixed(0) || 0;
+    ((good / total) * 100).toFixed(0) || 0;
+
   const positivePercentage = countPositiveFeedbackPercentage();
 
   const feedbackNames = Object.keys(feedbackObject);
